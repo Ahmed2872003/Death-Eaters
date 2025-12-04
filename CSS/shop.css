@@ -1,0 +1,58 @@
+/* HOME / SHOP VIEW */
+.shop-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.search-bar {
+  flex: 1;
+  min-width: 200px;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.game-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+.game-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+.game-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  background-color: #000;
+}
+.game-info {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.game-title {
+  font-family: var(--font-head);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.game-cat {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-bottom: auto;
+}
+.game-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin: 0.5rem 0;
+}

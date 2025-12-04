@@ -1,0 +1,148 @@
+/* --- CSS VARIABLES & RESET --- */
+:root {
+  --primary: #ff4655;
+  --primary-hover: #d13644;
+  --bg-dark: #0f1923;
+  --bg-card: #1f2b38;
+  --bg-input: #2a3b4c;
+  --text-main: #ffffff;
+  --text-muted: #8b9bb4;
+  --border: #354356;
+  --success: #2ecc71;
+  --font-head: "Rajdhani", sans-serif;
+  --font-body: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* --- UTILITIES --- */
+.hidden {
+  display: none !important;
+}
+.btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: var(--font-head);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+.btn-danger {
+  background-color: #e74c3c;
+  color: white;
+}
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+}
+
+input,
+select {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border);
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+  font-family: var(--font-body);
+}
+input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+input[type="file"] {
+  padding: 7px;
+  cursor: pointer;
+}
+
+/* --- LAYOUT --- */
+header {
+  background-color: var(--bg-card);
+  padding: 1rem 2rem;
+  border-bottom: 2px solid var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: var(--font-head);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.nav-item {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--text-muted);
+  transition: 0.3s;
+}
+.nav-item:hover,
+.nav-item.active {
+  color: var(--text-main);
+}
+.nav-item i {
+  margin-right: 5px;
+}
+
+.badge {
+  background-color: var(--primary);
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  vertical-align: top;
+  margin-left: 2px;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}

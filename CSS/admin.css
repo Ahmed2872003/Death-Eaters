@@ -1,0 +1,43 @@
+/* ADMIN PANEL */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+.admin-nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+}
+.admin-tab {
+  cursor: pointer;
+  padding: 5px 15px;
+  border-radius: 4px;
+  color: var(--text-muted);
+}
+.admin-tab.active {
+  background: var(--primary);
+  color: white;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.data-table th,
+.data-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.data-table th {
+  color: var(--primary);
+  font-family: var(--font-head);
+}
+.data-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
